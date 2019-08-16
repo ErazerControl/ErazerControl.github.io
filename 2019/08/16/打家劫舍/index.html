@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Daemon&#39;s Blog">
 <meta property="og:description" content="题目小偷准备在一排屋子偷钱，为不被发现他不能偷相邻屋子的钱，问最多投多少钱 测试用例1234输入: [1,2,3,1]输出: 4解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。     偷窃到的最高金额 = 1 + 3 = 4 。  讲解原因递归与动态规划的关系 思路一看题，能否递归做？发现可以，rob(nums)=max(rob(nums[1:],rob(n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-16T11:31:10.105Z">
+<meta property="og:updated_time" content="2019-08-16T11:36:19.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="打家劫舍">
 <meta name="twitter:description" content="题目小偷准备在一排屋子偷钱，为不被发现他不能偷相邻屋子的钱，问最多投多少钱 测试用例1234输入: [1,2,3,1]输出: 4解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。     偷窃到的最高金额 = 1 + 3 = 4 。  讲解原因递归与动态规划的关系 思路一看题，能否递归做？发现可以，rob(nums)=max(rob(nums[1:],rob(n">
@@ -357,6 +357,8 @@
 
 <h2 id="讲解原因"><a href="#讲解原因" class="headerlink" title="讲解原因"></a>讲解原因</h2><p>递归与动态规划的关系</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>一看题，能否递归做？发现可以，rob(nums)=max(rob(nums[1:],rob(nums[2:])+nums[0]),递归函数有了，递归边界怎么写？想一下假如nums长度等于100，刚开始怎么递归代码你肯定放心，顶多就是变成99的长度和98的长度，什么时候你不敢递归下去了，一直往下递归，当len(nums)==3时，我们得好好看看，它会继续递归nums[1:]和nums[2:],前者len是2后者是1,前者长度为2的nums再递归，分成长度为1的和长度为0的，那么现在你知道了，当len(nums)==1 or 0时，我们不能再让他递归下去了，那么这就是递归边界！以下是递归代码</p>
+<a id="more"></a>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def rob(self, nums: List[int]) -&gt; int:</span><br><span class="line">        if len(nums) == 0:</span><br><span class="line">            return 0</span><br><span class="line">        elif len(nums) == 1:</span><br><span class="line">            return nums[0]</span><br><span class="line">        return max(self.rob(nums[1:]),self.rob(nums[2:])+nums[0])</span><br></pre></td></tr></table></figure>
 
 <p>不好意思，超时了。转念一想，还是拿len(nums)==100举例，他递归99和98的，然后99又递归98和97的，98的递归了2次!这就是递归慢的原因，如果我们把递归的结果存起来，如果再递归时发现有结果了直接返回不就好了。代码如下</p>
