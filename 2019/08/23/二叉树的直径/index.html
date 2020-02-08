@@ -79,20 +79,19 @@
 
 
 
-<meta name="description" content="题目在含有奇数个节点的二叉数中做游戏，首先红蓝玩家依次选择某节点作为阵地的起始点，然后红蓝玩家轮流选择相应阵地的某一节点，将该节点的父子节点可拓展为阵地，循环此步骤，最终阵地多的颜色玩家胜利。  测试用例123输入：root = [1,2,3,4,5,6,7,8,9,10,11], n = 11, x = 3输出：True解释：一共11个节点，红色先选择节点3，第二个玩家可以选择值为 2的节点，之">
+<meta name="description" content="题目求二叉树的最长直径，直径指任意两个结点路径长度中。 测试用例1234567输入:     1         / \        2   3       / \           4   5  输出: 3 解释:它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。  讲解原因没考虑特殊情况 思路通过题意知道，要求的值应该就是左子树的高度+右子树的高度，但是忽略了最长直径不一定穿过">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树着色问题">
-<meta property="og:url" content="http://yoursite.com/2019/08/07/二叉树着色问题/index.html">
+<meta property="og:title" content="二叉树的直径">
+<meta property="og:url" content="http://yoursite.com/2019/08/23/二叉树的直径/index.html">
 <meta property="og:site_name" content="Daemon&#39;s Blog">
-<meta property="og:description" content="题目在含有奇数个节点的二叉数中做游戏，首先红蓝玩家依次选择某节点作为阵地的起始点，然后红蓝玩家轮流选择相应阵地的某一节点，将该节点的父子节点可拓展为阵地，循环此步骤，最终阵地多的颜色玩家胜利。  测试用例123输入：root = [1,2,3,4,5,6,7,8,9,10,11], n = 11, x = 3输出：True解释：一共11个节点，红色先选择节点3，第二个玩家可以选择值为 2的节点，之">
+<meta property="og:description" content="题目求二叉树的最长直径，直径指任意两个结点路径长度中。 测试用例1234567输入:     1         / \        2   3       / \           4   5  输出: 3 解释:它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。  讲解原因没考虑特殊情况 思路通过题意知道，要求的值应该就是左子树的高度+右子树的高度，但是忽略了最长直径不一定穿过">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/08/07/二叉树着色问题/1.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/07/二叉树着色问题/2.png">
-<meta property="og:updated_time" content="2019-08-13T14:43:55.742Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/23/二叉树的直径/1.png">
+<meta property="og:updated_time" content="2020-02-08T10:43:58.749Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树着色问题">
-<meta name="twitter:description" content="题目在含有奇数个节点的二叉数中做游戏，首先红蓝玩家依次选择某节点作为阵地的起始点，然后红蓝玩家轮流选择相应阵地的某一节点，将该节点的父子节点可拓展为阵地，循环此步骤，最终阵地多的颜色玩家胜利。  测试用例123输入：root = [1,2,3,4,5,6,7,8,9,10,11], n = 11, x = 3输出：True解释：一共11个节点，红色先选择节点3，第二个玩家可以选择值为 2的节点，之">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/07/二叉树着色问题/1.png">
+<meta name="twitter:title" content="二叉树的直径">
+<meta name="twitter:description" content="题目求二叉树的最长直径，直径指任意两个结点路径长度中。 测试用例1234567输入:     1         / \        2   3       / \           4   5  输出: 3 解释:它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。  讲解原因没考虑特殊情况 思路通过题意知道，要求的值应该就是左子树的高度+右子树的高度，但是忽略了最长直径不一定穿过">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/23/二叉树的直径/1.png">
 
 
 
@@ -122,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/07/二叉树着色问题/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/23/二叉树的直径/">
 
 
 
 
 
-  <title>二叉树着色问题 | Daemon's Blog</title>
+  <title>二叉树的直径 | Daemon's Blog</title>
   
 
 
@@ -265,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/07/二叉树着色问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/二叉树的直径/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xfhan">
@@ -282,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二叉树着色问题</h1>
+          <h1 class="post-title" itemprop="name headline">二叉树的直径</h1>
         
 
         <div class="post-meta">
@@ -294,8 +293,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-07T21:47:14+08:00">
-                2019-08-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T19:14:58+08:00">
+                2019-08-23
               </time>
             
 
@@ -304,28 +303,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -354,15 +331,14 @@
       
 
       
-        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>在含有奇数个节点的二叉数中做游戏，首先红蓝玩家依次选择某节点作为阵地的起始点，然后红蓝玩家轮流选择相应阵地的某一节点，将该节点的父子节点可拓展为阵地，循环此步骤，最终阵地多的颜色玩家胜利。</p>
-<img src="/2019/08/07/二叉树着色问题/1.png" title="测试用例图解">
-<h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：root = [1,2,3,4,5,6,7,8,9,10,11], n = 11, x = 3</span><br><span class="line">输出：True</span><br><span class="line">解释：一共11个节点，红色先选择节点3，第二个玩家可以选择值为 2的节点，之后无论怎么扩展阵地，蓝色必胜。(实际选择1更佳)</span><br></pre></td></tr></table></figure>
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>求二叉树的最长直径，直径指任意两个结点路径长度中。</p>
+<h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入:     1</span><br><span class="line">         / \</span><br><span class="line">        2   3</span><br><span class="line">       / \     </span><br><span class="line">      4   5  </span><br><span class="line">输出: 3 </span><br><span class="line">解释:它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。</span><br></pre></td></tr></table></figure>
 
-<h2 id="失败原因"><a href="#失败原因" class="headerlink" title="失败原因"></a>失败原因</h2><p>不会做.</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>当红色选择节点3时，蓝色最好占据其父子节点，以防扩张，若选择1，则C区域接下来都会被蓝色占据，若选择6，A区域会被蓝色占据，选择7，B区域被占据。我们希望蓝色胜利，当然要选择区域面积最大的，所以max(A,B,C)就是蓝色最大可能的面积，当这个面积大于一半的时候，蓝色胜利。所以这道题其实就是求某一点的左/右子数节点数目的问题。</p>
-<img src="/2019/08/07/二叉树着色问题/2.png" title="A/B/C区域图解">
+<h2 id="讲解原因"><a href="#讲解原因" class="headerlink" title="讲解原因"></a>讲解原因</h2><p>没考虑特殊情况</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>通过题意知道，要求的值应该就是左子树的高度+右子树的高度，但是忽略了最长直径不一定穿过根节点（如下图），所以需要在每次递归时，记录左右子树高度之和，取最大值</p>
+<img src="/2019/08/23/二叉树的直径/1.png" title="最长直径不通过根节点">
 <a id="more"></a>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def btreeGameWinningMove(self, root: TreeNode, n: int, x: int) -&gt; bool:</span><br><span class="line">        self.c = []</span><br><span class="line">        def node(root):</span><br><span class="line">            if not root:</span><br><span class="line">                return 0</span><br><span class="line">            l = node(root.left)</span><br><span class="line">            r = node(root.right)</span><br><span class="line">            if root.val == x:</span><br><span class="line">                self.c = [l,r]</span><br><span class="line">            return l + r + 1</span><br><span class="line">        node(root)</span><br><span class="line">        if max(max(self.c),n-(sum(self.c)+1)) &gt; n//2:</span><br><span class="line">            return True</span><br><span class="line">        return False</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def diameterOfBinaryTree(self, root) -&gt; int:</span><br><span class="line">        if root is None:</span><br><span class="line">            return 0</span><br><span class="line">        self.res = 0</span><br><span class="line">        self.heigth(root)</span><br><span class="line">        return self.res</span><br><span class="line">    def heigth(self,root):</span><br><span class="line">        if root is None:</span><br><span class="line">            return 0</span><br><span class="line">        L = self.heigth(root.left)</span><br><span class="line">        R = self.heigth(root.right)</span><br><span class="line">        self.res = max(self.res, L + R)</span><br><span class="line">        return max(L,R) + 1</span><br></pre></td></tr></table></figure>
 
 
       
@@ -388,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/02/搜索旋转排序数组/" rel="next" title="搜索旋转排序数组">
-                <i class="fa fa-chevron-left"></i> 搜索旋转排序数组
+              <a href="/2019/08/16/打家劫舍/" rel="next" title="打家劫舍">
+                <i class="fa fa-chevron-left"></i> 打家劫舍
               </a>
             
           </div>
@@ -398,8 +374,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/07/合并区间/" rel="prev" title="合并区间">
-                合并区间 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/08/柱状图的最大矩形/" rel="prev" title="柱状图的最大矩形">
+                柱状图的最大矩形 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -534,7 +510,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试用例"><span class="nav-number">2.</span> <span class="nav-text">测试用例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#失败原因"><span class="nav-number">3.</span> <span class="nav-text">失败原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">4.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">5.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试用例"><span class="nav-number">2.</span> <span class="nav-text">测试用例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#讲解原因"><span class="nav-number">3.</span> <span class="nav-text">讲解原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">4.</span> <span class="nav-text">思路</span></a></li></ol></div>
             
 
           </div>

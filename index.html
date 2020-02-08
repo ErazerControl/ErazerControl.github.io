@@ -262,6 +262,288 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/08/柱状图的最大矩形/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xfhan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Daemon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/08/柱状图的最大矩形/" itemprop="url">柱状图的最大矩形</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-08T21:49:08+08:00">
+                2020-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>求在柱状图中能勾勒出的最大面积。</p>
+<img src="/2020/02/08/柱状图的最大矩形/1.jpg" title="图解">
+
+<h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [2,1,5,6,2,3]</span><br><span class="line">输出: 10</span><br></pre></td></tr></table></figure>
+
+<h2 id="失败原因"><a href="#失败原因" class="headerlink" title="失败原因"></a>失败原因</h2><p>还是不够了解单调栈。对分治法有了更深的了解。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h3><p>分治法不一定是从中心点分治，比如这道题，从数组的中心点划分为2个子问题，很难做。但如果找到柱状图的最小柱子idx，柱状图的最大面积要么出现在idx的左侧，要么在idx的右侧，要么就包含该柱子(S=heights[idx]*length)。时间复杂度为nlogn。</p>
+<h3 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h3><p>使用这种数据结构的思路是，最大面积可能是是以heights<a href="0<=i<length">i</a>为高度(h)构成的矩形，总共N种可能。如果能立马知道w,即以该柱子为h的左右侧边界，则面积h*w即可知道。而单调栈的作用就是，在数组中，使用O(N)时间复杂度就可以求得数组中每一个元素左/右侧第一个比其小的下标。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/08/柱状图的最大矩形/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/二叉树的直径/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xfhan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Daemon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/23/二叉树的直径/" itemprop="url">二叉树的直径</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-23T19:14:58+08:00">
+                2019-08-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>求二叉树的最长直径，直径指任意两个结点路径长度中。</p>
+<h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入:     1</span><br><span class="line">         / \</span><br><span class="line">        2   3</span><br><span class="line">       / \     </span><br><span class="line">      4   5  </span><br><span class="line">输出: 3 </span><br><span class="line">解释:它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。</span><br></pre></td></tr></table></figure>
+
+<h2 id="讲解原因"><a href="#讲解原因" class="headerlink" title="讲解原因"></a>讲解原因</h2><p>没考虑特殊情况</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>通过题意知道，要求的值应该就是左子树的高度+右子树的高度，但是忽略了最长直径不一定穿过根节点（如下图），所以需要在每次递归时，记录左右子树高度之和，取最大值</p>
+<img src="/2019/08/23/二叉树的直径/1.png" title="最长直径不通过根节点">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/23/二叉树的直径/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/打家劫舍/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1432,317 +1714,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/下一个排列/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xfhan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daemon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/31/下一个排列/" itemprop="url">下一个排列</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-31T22:51:39+08:00">
-                2019-07-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给出给定序列的下一个字典序排列(常数空间复杂度，在原数组上直接修改)</p>
-<h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1,2,3 → 1,3,2</span><br><span class="line">3,2,1 → 1,2,3</span><br><span class="line">1,1,5 → 1,5,1</span><br></pre></td></tr></table></figure>
-
-<h2 id="失败原因"><a href="#失败原因" class="headerlink" title="失败原因"></a>失败原因</h2><p>遗漏情况，没有考虑全面</p>
-<img src="/2019/07/31/下一个排列/1.png" title="惨图">
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>惨图如上，太菜了，不过我是打不死的小强！</p>
-<p>思路过程如下：</p>
-<ol>
-<li>我只想到先找出相邻元素中后元素大于前元素的坐标，然后交换两元素，其后进行排序，例如[1 3 4 2]-&gt;[1 4 3 2]-&gt;[1 4 2 3]，但是如果[1 2 4 3]-&gt;[1 4 2 3]显然不对，因为[1 3 2 4]才是我们想要的。</li>
-<li>找到相邻元素(i,i+1)后，不应该直接交换，而是应该在[i:]中找出比nums[i-1]大的最小值nums[k]与nums[i]交换，然后对[i+1:]再排序(心想nlogn也行先做出来就行)，nums[i+1:].sort()</li>
-<li>万万没想到nums[i+1:].sort()不管用，后来才意识到nums[i+1:]相当于开辟了新空间，在新空间排序的结果不会影响到nums[]，导致一直错误</li>
-<li>查不到如何在原数组的区间排序就放弃了，看了答案，发现交换元素后，根本不需要做一遍排序，因为nums[i+1:]是逆序的！只需要颠倒就行了！不信，请看[2 5 4 3 1] 找到(2,5)是逆元素对,然后在[5 4 3 1]中找到比2最小的是3，交换[3 5 4 2 1]，恰好逆序，有人可能质疑我故意找容易的例子，其实可以证明的，假设待交换的元素序号为i,比它大的最小元素序号为j，我们能确定[i+1:]一定是逆序的，就是不确定是否交换元素后也逆序，先证明交换前一个元素大于它，nums[j-1]&gt;nums[j]&amp;nums[j]&gt;nums[i]，故nums[j-1]&gt;nums[i]，然后，nums[j:]之后的元素一定都小于nums[i]，想想是不是这么个道理，所以得出交换后依旧逆序。</li>
-<li>万万没想到，由于找最小值时候一个符号，按照我的代码找到的是第一个3，[2,3,1,3,3]-&gt;[2 3 3 1 3]-&gt;[2 3 3 3 1]，实际答案应该是[2 3 3 1 3]，添了个=号后终于过了，优化的时候发现从后往前找不会出现这个问题</li>
-</ol>
-<p>ps：注意考虑[4 3 2 1] -&gt;[1 2 3 4]的情况</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/31/下一个排列/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/30/合并两个有序链表/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xfhan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daemon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/30/合并两个有序链表/" itemprop="url">合并两个有序链表</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-30T22:48:22+08:00">
-                2019-07-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>合并2个有序链表</p>
-<h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4</span><br><span class="line">输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</span><br></pre></td></tr></table></figure>
-
-<h2 id="失败原因"><a href="#失败原因" class="headerlink" title="失败原因"></a>失败原因</h2><p>逻辑乱，没有想到递归</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>遇到这道题思路还是乱，没有好的逻辑，导致自己想的方法异常复杂还不一定过，经常忘记<strong>递归</strong>这个最基本的算法，以后遇到题得先考虑是否可以递归去解，递归虽然时间复杂度高(有时候不一定高，比如本题)，但确实是很好用的思想，另外对于链表问题，经常引入一个哑节点会使解题格外舒畅。</p>
-<p>ps：尽量用较少的if语句，例如递归代码中可以4个if，但性能不如if elif..</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/30/合并两个有序链表/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1795,7 +1766,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1817,7 +1788,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1854,7 +1825,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
