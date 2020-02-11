@@ -790,8 +790,8 @@
 <h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3</span><br><span class="line">输出：Reference of the node with value = 8</span><br></pre></td></tr></table></figure>
 
 <img src="/2019/08/15/相交链表/1.jpg" title="测试用例图">
-<h2 id="失败原因"><a href="#失败原因" class="headerlink" title="失败原因"></a>失败原因</h2><p>马虎</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>当第一次遍历都链表末尾时，链接到另一个链表头部，则每个指针遍历的次数都是len(A)+len(B),马虎的点在于，遍历没标flag，每次循环到最后一个都去链接导致死循环。还得提一下，代码巧妙的点在于循环的条件是while p!=q，退出循环要么是第二次遍历到最后p=q=None要么是有相交点,最后直接return p即可</p>
+<h2 id="失败原因"><a href="#失败原因" class="headerlink" title="失败原因"></a>失败原因</h2><p>马虎<br>[2020年2月11日打卡]又是因为马虎出错了，同一个坑。。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>新思路：马虎的点依旧是在当没有相交点的测试用例时，无限循环下去。问题出在了当p或q为None时，我就想立马置它为headB或headA。相当于遇到None时，也停留一下，而不是立马置为头节点。<br>当第一次遍历都链表末尾时，链接到另一个链表头部，则每个指针遍历的次数都是len(A)+len(B),马虎的点在于，遍历没标flag，每次循环到最后一个都去链接导致死循环。还得提一下，代码巧妙的点在于循环的条件是while p!=q，退出循环要么是第二次遍历到最后p=q=None要么是有相交点,最后直接return p即可。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/15/相交链表/#more" rel="contents">
@@ -1788,7 +1788,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
